@@ -3,6 +3,8 @@ package org.cse.springtute;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class StudentManagementSystem {
 
@@ -23,7 +25,11 @@ public class StudentManagementSystem {
     }
 
     public void registerStudent(Student stu) {
-        repo.saveStudent(stu);
-        //Save the new student using repository
+        try {
+            repo.saveStudent(stu);
+            //Save the new student using repository
+        } catch (Exception ex) {
+            Logger.getLogger(StudentManagementSystem.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

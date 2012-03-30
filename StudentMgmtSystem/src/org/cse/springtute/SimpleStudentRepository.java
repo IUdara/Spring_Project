@@ -37,8 +37,12 @@ public class SimpleStudentRepository implements StudentRepository {
     }
 
     @Override
-    public void updateStudent(Student stu) {
+    public void updateStudent(Student stu)throws Exception {
+        if (studentsDb.containsKey(stu.getRegNumber())) {
         studentsDb.put(stu.getRegNumber(), stu);
+        } else {
+            throw new Exception();
+        }
 
     }
 

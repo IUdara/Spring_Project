@@ -10,7 +10,7 @@ public interface StudentRepository {
 
 	Student findStudent(long regNumber);
 
-	void updateStudent(Student stu);
+	void updateStudent(Student stu)throws Exception;
 
 	List<Student> findAllStudents();
 }
