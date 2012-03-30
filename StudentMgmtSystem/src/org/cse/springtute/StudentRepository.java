@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface StudentRepository {
 
-	void saveStudent(Student stu);
+	void saveStudent(Student stu)throws Exception ;
 
-	void deleteStudent(Student stu);
+	void deleteStudent(Student stu)throws Exception ;
 
 	Student findStudent(long regNumber);
 

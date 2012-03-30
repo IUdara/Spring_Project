@@ -5,21 +5,29 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.lang.Exception;
 
 public class SimpleStudentRepository implements StudentRepository {
 
     private Map<Long, Student> studentsDb = new HashMap<Long, Student>();
 
-   
     @Override
-    public void saveStudent(Student stu) {
-        studentsDb.put(stu.getRegNumber(), stu);
+    public void saveStudent(Student stu) throws Exception {
+        if (studentsDb.containsKey(stu.getRegNumber())) {
+            throw new Exception();
+        } else {
+            studentsDb.put(stu.getRegNumber(), stu);
+        }
 
     }
 
     @Override
-    public void deleteStudent(Student stu) {
-        studentsDb.remove(stu);
+    public void deleteStudent(Student stu) throws Exception {
+        if (studentsDb.containsKey(stu.getRegNumber())) {
+            studentsDb.remove(stu.getRegNumber());
+        } else {
+            throw new Exception();
+        }
 
     }
 

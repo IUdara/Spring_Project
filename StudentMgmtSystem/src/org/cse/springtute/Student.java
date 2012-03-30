@@ -5,6 +5,18 @@ public class Student {
     private String firstName;
     private String lastName;
     private long regNumber;
+
+    public Student(String firstName, String lastName, long regNumber, String address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.regNumber = regNumber;
+        this.address = address;
+    }
+
+    public Student() {
+    }
+
+
     private String address;
 
     public void setAddress(String address) {
