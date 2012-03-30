@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:beans="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:lang="http://www.springframework.org/schema/lang"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.5.xsd   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <bean id="sms1" class="org.cse.springtute.StudentManagementSystem" p:repo-ref="repo"> </bean>
+    <bean id="repo"  class="org.cse.springtute.SimpleStudentRepository" > </bean>
+    <bean id="s1"  class="org.cse.springtute.Student" p:firstName="Isuru"  p:lastName="Jayaweera" p:regNumber="100227" p:address="Veyaweera"> </bean>
+    <bean id="s2"  class="org.cse.springtute.Student" p:firstName="Lahiru"  p:lastName="Kodikara" p:regNumber="100437" p:address="Gampaha"> </bean>
+
+</beans>
